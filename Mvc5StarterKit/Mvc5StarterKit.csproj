@@ -471,9 +471,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Izenda.mdf" />
-    <Content Include="App_Data\Izenda_log.ldf">
-      <DependentUpon>Izenda.mdf</DependentUpon>
+    <Content Include="App_Data\IzendaMVC.mdf" />
+    <Content Include="App_Data\IzendaMVC_log.ldf">
+      <DependentUpon>IzendaMVC.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\Mvc5StarterKit.mdf" />
     <Content Include="App_Data\Mvc5StarterKit_log.ldf">
@@ -481,7 +481,6 @@
     </Content>
     <Content Include="Content\alertify.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DELDG\DeluxDesigns.png" />
     <Content Include="Content\DELDG\izenda-deldg.css" />
     <Content Include="Content\NATWR\izenda-natwr.css" />
@@ -492,7 +491,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="readme.txt" />
     <Content Include="Scripts\alertify.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
