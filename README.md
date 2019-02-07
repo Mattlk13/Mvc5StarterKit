@@ -1,12 +1,12 @@
 # Izenda Mvc5Starterkit
 
-## Overview
+## Overview 
 
 ### Q. What is in this repository?
 
 ### A. This is a simple example using an MVC Visual Studio project template with Izenda Embedded into it. This repository is only an example of integrating Izenda into another application. The Visual Studio project template used in this scenario is used as a substitute for your application. This repository shows examples of how you might embed Izenda into your application.
 
- :warning: **The MVC Kit is designed for demonstration purposes and should not be used as an ‚Äúas-is‚Äù fully-integrated solution. You can use the kit for reference or a baseline but ensure that security and customization meet the standards of your company.**
+ :warning: **The MVC Kit is designed for demonstration purposes and should not be used as an ìas-isî fully-integrated solution. You can use the kit for reference or a baseline but ensure that security and customization meet the standards of your company.**
  
 ## Getting Started 
  Download the v2.6.20 (https://downloads.izenda.com/v2.6.0-v2.6.24/v2.6.20/) of the API and EmbeddedUI and copy the following:
