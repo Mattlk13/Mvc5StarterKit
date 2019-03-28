@@ -23,7 +23,7 @@ namespace Mvc5StarterKit.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly ILog logger = LogManager.GetLogger("MVC5KitLogger");
+        private static readonly ILog logger = LogManager.GetLogger(typeof(MvcApplication));
 
         public ActionResult Index()
         {
