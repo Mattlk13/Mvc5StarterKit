@@ -621,13 +621,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>XCOPY /S /I /Y  "$(ProjectDir)IzendaResources\Content" "$(ProjectDir)Content\"
-XCOPY /S /I /Y  "$(ProjectDir)IzendaResources\EmailTemplates" "$(ProjectDir)EmailTemplates\"
-
-XCOPY /S /I /Y  "$(ProjectDir)IzendaResources\Export" "$(ProjectDir)Export\"
-
-XCOPY /S /I /Y  "$(ProjectDir)IzendaResources\Themes" "$(ProjectDir)Themes\"
-XCOPY /S /I /Y "$(ProjectDir)IzendaReferences\Resources" "$(ProjectDir)\bin\Resources\"</PostBuildEvent>
+    <PostBuildEvent>XCOPY "$(ProjectDir)IzendaResources\Content" "$(ProjectDir)Content\" /s /i /y
+XCOPY "$(ProjectDir)IzendaResources\EmailTemplates" "$(ProjectDir)EmailTemplates\" /s /i /y
+XCOPY "$(ProjectDir)IzendaResources\Export" "$(ProjectDir)Export\" /s /i /y
+XCOPY "$(ProjectDir)IzendaResources\Themes" "$(ProjectDir)Themes\" /s /i /y
+XCOPY "$(ProjectDir)IzendaResources\Resources" "$(ProjectDir)bin\Resources\" /s /i /y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
