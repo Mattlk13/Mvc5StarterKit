@@ -534,7 +534,16 @@ namespace Mvc5StarterKit.Controllers
         public ActionResult ReportPart(Guid id, string token)
         {
             ViewBag.Id = id;
-            ViewBag.Token = token;
+            var accessToken = token;
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                accessToken = Request.Cookies["access_token"]?.Value;
+            }
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                accessToken = Request.Headers["access_token"];
+            }
+            ViewBag.Token = accessToken;
             return View();
         }
 
