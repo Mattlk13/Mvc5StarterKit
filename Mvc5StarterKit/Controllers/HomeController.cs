@@ -531,6 +531,11 @@ namespace Mvc5StarterKit.Controllers
             return View();
         }
 
+        public ActionResult MixedParts()
+        {
+            return View();
+        }
+
         public ActionResult ReportPart(Guid id, string token)
         {
             ViewBag.Id = id;

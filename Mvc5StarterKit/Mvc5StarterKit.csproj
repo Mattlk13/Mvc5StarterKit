@@ -553,6 +553,7 @@
     <Content Include="Views\Home\ReadMe.cshtml" />
     <Content Include="Views\Dashboard\DashboardViewer.cshtml" />
     <Content Include="Views\Report\AdvancedReportParts.cshtml" />
+    <Content Include="Views\Home\MixedParts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IzendaReferences\" />
@@ -621,11 +622,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(ProjectDir)IzendaResources\Content" "$(ProjectDir)Content\" /s /i /y
-XCOPY "$(ProjectDir)IzendaResources\EmailTemplates" "$(ProjectDir)EmailTemplates\" /s /i /y
-XCOPY "$(ProjectDir)IzendaResources\Export" "$(ProjectDir)Export\" /s /i /y
-XCOPY "$(ProjectDir)IzendaResources\Themes" "$(ProjectDir)Themes\" /s /i /y
-XCOPY "$(ProjectDir)IzendaResources\Resources" "$(ProjectDir)bin\Resources\" /s /i /y</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

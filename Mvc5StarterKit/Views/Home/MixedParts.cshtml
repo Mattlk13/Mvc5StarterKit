@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Mixed Parts";
+}
+<style>
+    .part-viewer {
+        float: left;
+        height: 600px;
+        background-color: white;
+        overflow: scroll;
+        width: 50%;
+    }
+
+    .setting-row {
+        margin-top: 10px;
+    }
+
+    input[type=text] {
+        width: 300px;
+    }
+
+    #settingPart {
+        width: 100%;
+    }
+</style>
+<div class="loader" id="reportPartLoader"> </div>
+<div class="izenda-container">
+    <div id="settingPart">
+        <div class="row setting-row">
+            <div class="col-md-1">
+                <p>Type: </p>
+            </div>
+            <div class="col-md-1">
+                <select>
+                    <option value="report">Report</option>
+                    <option value="reportPart">Report Part</option>
+                    <option value="dashboard">Dashboard</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <p>Id: </p>
+            </div>
+            <div class="col-md-2">
+                <input type="text" />
+            </div>
+        </div>
+    </div>
+    <button type="button" onclick="addPart()">Add More Part</button>
+    <button type="button" onclick="draw();">Draw</button>
+    <div id="drawingPart">
+    </div>
+
+    <script type="text/javascript">
+        function addPart() {
+            var row = $('#settingPart>div:first-child').clone().find('input').each(function () {
+                $(this).val('')
+            }).end().appendTo('#settingPart');
+        }
+
+        function addElements(allParts) {
+            var drawingPart = $('#drawingPart').first();
+
+            function createRow() {
+                var row = document.createElement('div');
+                row.className = 'row';
+                return row;
+            }
+
+            var currentRow;
+            allParts.forEach(function (item, index) {
+                if (index % 2 === 0) {
+                    currentRow = createRow();
+                    drawingPart.append(currentRow);
+                }
+                var newDiv = document.createElement('div');
+                newDiv.id = 'izenda-part' + (index + 1);
+                newDiv.className = 'part-viewer';
+                currentRow.append(newDiv);
+            });
+        }
+
+        function draw() {
+            $('#drawingPart').empty();
+            var allParts = [];
+
+            $('#settingPart').first().children().each(function () {
+                var type = $(this).find('select').first().val();
+                var id = $(this).find('input').first().val();
+
+                if (id !== '') {
+                    allParts.push({ type: type, id: id });
+                }
+            });
+
+            addElements(allParts);
+            izendaInitMixedParts(allParts);            
+        }
+    </script>
+</div>
