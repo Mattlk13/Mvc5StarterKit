@@ -15,7 +15,7 @@
     }
 
     input[type=text] {
-        width: 300px;
+        width: 250px;
     }
 
     #settingPart {
@@ -40,7 +40,15 @@
                 <p>Id: </p>
             </div>
             <div class="col-md-2">
-                <input type="text" />
+                <input type="text"
+                       class="partId"/>
+            </div>
+            <div class="col-md-1">
+                <p>Hide name: </p>
+            </div>
+            <div class="col-md-1">
+                <input class="hideName"
+                       type="checkbox"/>
             </div>
         </div>
     </div>
@@ -51,9 +59,14 @@
 
     <script type="text/javascript">
         function addPart() {
-            var row = $('#settingPart>div:first-child').clone().find('input').each(function () {
-                $(this).val('')
-            }).end().appendTo('#settingPart');
+            var row = $('#settingPart>div:first-child').clone()
+                                                       .find('input[type=text]').each(function () {
+                                                           $(this).val('')
+                                                       }).end()
+                                                       .find('input[type=checkbox]').each(function () {
+                                                           $(this).prop('checked', false);
+                                                       }).end()
+                                                       .appendTo('#settingPart');
         }
 
         function addElements(allParts) {
@@ -84,10 +97,11 @@
 
             $('#settingPart').first().children().each(function () {
                 var type = $(this).find('select').first().val();
-                var id = $(this).find('input').first().val();
+                var id = $(this).find('input[type=text]').first().val();
+                var hideName = $(this).find('input[type=checkbox]').first().prop('checked');
 
                 if (id !== '') {
-                    allParts.push({ type: type, id: id });
+                    allParts.push({ type: type, id: id, hideName: hideName });
                 }
             });
 

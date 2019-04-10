@@ -110,7 +110,9 @@ var izendaInitMixedParts = function (allParts) {
             } else if (item.type === 'reportPart') {
                 IzendaSynergy.renderReportPart(element, { id: item.id });
             } else {
-                IzendaSynergy.renderDashboardViewerPage(element, item.id);
+                IzendaSynergy.renderDashboardViewerPage(element, item.id, null, {
+                    hideDashboardName : item.hideName
+                });
             }
         });
 
