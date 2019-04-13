@@ -108,7 +108,10 @@ var izendaInitMixedParts = function (allParts) {
             if (item.type === 'report') {
                 IzendaSynergy.renderReportViewerPage(element, item.id);
             } else if (item.type === 'reportPart') {
-                IzendaSynergy.renderReportPart(element, { id: item.id });
+                IzendaSynergy.renderReportPart(element, { id: item.id }, null, {
+                    hideReportName: item.hideReportName,
+                    hidePreviewRecords: item.hidePreviewRecords
+                });
             } else {
                 IzendaSynergy.renderDashboardViewerPage(element, item.id, null, {
                     hideDashboardName : item.hideName

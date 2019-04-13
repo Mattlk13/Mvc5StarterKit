@@ -41,14 +41,21 @@
             </div>
             <div class="col-md-2">
                 <input type="text"
-                       class="partId"/>
+                       class="partId" />
             </div>
             <div class="col-md-1">
                 <p>Hide name: </p>
             </div>
             <div class="col-md-1">
                 <input class="hideName"
-                       type="checkbox"/>
+                       type="checkbox" />
+            </div>
+            <div class="col-md-1">
+                <p>Hide Preview Records: </p>
+            </div>
+            <div class="col-md-1">
+                <input class="hidePreviewRecords"
+                       type="checkbox" />
             </div>
         </div>
     </div>
@@ -99,11 +106,13 @@
                 var type = $(this).find('select').first().val();
                 var id = $(this).find('input[type=text]').first().val();
                 var hideName = $(this).find('input[type=checkbox]').first().prop('checked');
-
+                var hidePreviewRecords = $('.hidePreviewRecords').prop('checked');
                 if (id !== '') {
-                    allParts.push({ type: type, id: id, hideName: hideName });
+                    allParts.push({ type: type, id: id, hideName: hideName, hidePreviewRecords });
                 }
             });
+
+            console.log('@@@@@@@@@@@@@@@@@@@@@@@@', allParts);
 
             addElements(allParts);
             izendaInitMixedParts(allParts);            
