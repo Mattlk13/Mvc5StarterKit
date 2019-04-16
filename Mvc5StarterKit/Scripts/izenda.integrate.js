@@ -106,10 +106,13 @@ var izendaInitMixedParts = function (allParts) {
         allParts.forEach(function (item, index) {
             var element = document.getElementById('izenda-part' + (index + 1));
             if (item.type === 'report') {
-                IzendaSynergy.renderReportViewerPage(element, item.id);
+                IzendaSynergy.renderReportViewerPage(element, item.id, null, {
+                    hideReportName: item.hideName,
+                    hidePreviewRecords: item.hidePreviewRecords
+                });
             } else if (item.type === 'reportPart') {
                 IzendaSynergy.renderReportPart(element, { id: item.id }, null, {
-                    hideReportName: item.hideReportName,
+                    hideReportName: item.hideName,
                     hidePreviewRecords: item.hidePreviewRecords
                 });
             } else {
