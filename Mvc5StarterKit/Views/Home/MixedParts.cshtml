@@ -72,7 +72,7 @@
                                                        }).end()
                                                        .find('input[type=checkbox]').each(function () {
                                                            $(this).prop('checked', false);
-                                                       }).end()
+                                                        }).end()
                                                        .appendTo('#settingPart');
         }
 
@@ -106,7 +106,7 @@
                 var type = $(this).find('select').first().val();
                 var id = $(this).find('input[type=text]').first().val();
                 var hideName = $(this).find('input[type=checkbox]').first().prop('checked');
-                var hidePreviewRecords = $('.hidePreviewRecords').prop('checked');
+                var hidePreviewRecords = $(this).find('.hidePreviewRecords').prop('checked');
                 if (id !== '') {
                     allParts.push({ type: type, id: id, hideName: hideName, hidePreviewRecords });
                 }
