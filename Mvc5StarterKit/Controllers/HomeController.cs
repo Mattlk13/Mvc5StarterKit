@@ -23,7 +23,7 @@ namespace Mvc5StarterKit.Controllers
 {
     public class HomeController : Controller
     {
-        private static readonly ILog logger = LogManager.GetLogger("MVC5KitLogger");
+        private static readonly ILog logger = LogManager.GetLogger(typeof(MvcApplication));
 
         public ActionResult Index()
         {
@@ -531,10 +531,24 @@ namespace Mvc5StarterKit.Controllers
             return View();
         }
 
+        public ActionResult MixedParts()
+        {
+            return View();
+        }
+
         public ActionResult ReportPart(Guid id, string token)
         {
             ViewBag.Id = id;
-            ViewBag.Token = token;
+            var accessToken = token;
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                accessToken = Request.Cookies["access_token"]?.Value;
+            }
+            if (string.IsNullOrWhiteSpace(accessToken))
+            {
+                accessToken = Request.Headers["access_token"];
+            }
+            ViewBag.Token = accessToken;
             return View();
         }
 

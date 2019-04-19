@@ -93,6 +93,39 @@ var izendaInitSetting = function () {
     this.DoRender(successFunc);
 };
 
+var izendaInitMixedParts = function (allParts) {
+
+    function successFunc(data, status) {
+        console.info(data);
+        var currentUserContext = {
+            token: data.token
+        };
+
+        IzendaSynergy.setCurrentUserContext(currentUserContext);
+
+        allParts.forEach(function (item, index) {
+            var element = document.getElementById('izenda-part' + (index + 1));
+            if (item.type === 'report') {
+                IzendaSynergy.renderReportViewerPage(element, item.id, null, {
+                    hideReportName: item.hideName,
+                    hidePreviewRecords: item.hidePreviewRecords
+                });
+            } else if (item.type === 'reportPart') {
+                IzendaSynergy.renderReportPart(element, { id: item.id }, null, {
+                    hideReportName: item.hideName,
+                    hidePreviewRecords: item.hidePreviewRecords
+                });
+            } else {
+                IzendaSynergy.renderDashboardViewerPage(element, item.id, null, {
+                    hideDashboardName : item.hideName
+                });
+            }
+        });
+
+    }
+    this.DoRender(successFunc);
+}
+
 // Render report parts to specific <div> tag by report part id
 var izendaInitReportPartDemo = function () {
 
