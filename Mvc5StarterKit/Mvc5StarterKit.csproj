@@ -68,8 +68,20 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="evohtmltopdf">
-      <HintPath>IzendaReferences\evohtmltopdf.dll</HintPath>
+    <Reference Include="Syncfusion.Compression.Base">
+      <HintPath>IzendaReferences\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.HtmlConverter.Base">
+      <HintPath>IzendaReferences\Syncfusion.HtmlConverter.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base">
+      <HintPath>IzendaReferences\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.CData.Elasticsearch">
+      <HintPath>IzendaReferences\System.Data.CData.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.CData.MongoDB">
+      <HintPath>IzendaReferences\System.Data.CData.MongoDB.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>IzendaReferences\HtmlAgilityPack.dll</HintPath>
@@ -107,6 +119,12 @@
     </Reference>
     <Reference Include="Izenda.BI.DataAdaptor.RDBMS.SQL">
       <HintPath>IzendaReferences\Izenda.BI.DataAdaptor.RDBMS.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Elasticsearch">
+      <HintPath>IzendaReferences\Izenda.BI.DataAdaptor.RDBMS.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Mongo">
+      <HintPath>IzendaReferences\Izenda.BI.DataAdaptor.RDBMS.Mongo.dll</HintPath>
     </Reference>
     <Reference Include="Izenda.BI.DataSourceAdapter, Version=0.22.15.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -172,6 +190,12 @@
     </Reference>
     <Reference Include="Izenda.BI.QueryNormalizer.SQL">
       <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Elasticsearch">
+      <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Mongo">
+      <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Mongo.dll</HintPath>
     </Reference>
     <Reference Include="Izenda.BI.QueryNormalizer.Utility">
       <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Utility.dll</HintPath>
