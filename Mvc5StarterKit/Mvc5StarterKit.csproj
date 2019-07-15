@@ -68,6 +68,21 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Izenda.BI.Cache">
+      <HintPath>IzendaReferences\Izenda.BI.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.ExternalStorageCache">
+      <HintPath>IzendaReferences\Izenda.BI.Cache.ExternalStorageCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.MemCache">
+      <HintPath>IzendaReferences\Izenda.BI.Cache.MemCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.Metadata">
+      <HintPath>IzendaReferences\Izenda.BI.Cache.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.Schedule">
+      <HintPath>IzendaReferences\Izenda.BI.Cache.Schedule.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Compression.Base">
       <HintPath>IzendaReferences\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>

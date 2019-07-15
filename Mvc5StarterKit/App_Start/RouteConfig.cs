@@ -18,19 +18,19 @@ namespace Mvc5StarterKit
 
             routes.MapRoute(
                 name: "ReportPart",
-                url: "viewer/reportpart/{id}",
+                url: "izenda/viewer/reportpart/{id}",
                 defaults: new { controller = "Home", action = "ReportPart" }
             );
 
             routes.MapRoute(
                 name: "ReportViewer",
-                url: "report/view/{id}",
+                url: "izenda/report/view/{id}",
                 defaults: new { controller = "Report", action = "ReportViewer" }
             );
 
             routes.MapRoute(
                 name: "DashboardViewer",
-                url: "dashboard/edit/{id}",
+                url: "izenda/dashboard/edit/{id}",
                 defaults: new { controller = "Dashboard", action = "DashboardViewer" }
             );
 
