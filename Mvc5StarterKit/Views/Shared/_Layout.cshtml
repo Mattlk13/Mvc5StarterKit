@@ -79,7 +79,9 @@
     <div class="container-fluid body-content">
         @RenderBody()
         <footer>
-            <p>&copy; @DateTime.Now.Year - Izenda Integrated BI Platform - Version @IzendaSkinHelper.GetCurrentProductVersion()</p>
+            <div class="izenda-content-wrapper">
+                <p>&copy; @DateTime.Now.Year - Izenda Integrated BI Platform - Version @IzendaSkinHelper.GetCurrentProductVersion()</p>
+            </div>
         </footer>
     </div>
 

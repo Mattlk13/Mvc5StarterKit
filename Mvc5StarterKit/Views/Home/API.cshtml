@@ -4,31 +4,32 @@
 @{
     ViewBag.Title = "Izenda API";
 }
+<div class="izenda-content-wrapper">
+    <div class="jumbotron">
+        <h1>Izenda API</h1>
+    </div>
 
-<div class="jumbotron">
-    <h1>Izenda API</h1>
-</div>
+    @Html.ValidationSummary(false)
 
-@Html.ValidationSummary(false)
-
-@using (Html.BeginForm())
-{
-    if (!string.IsNullOrEmpty(Model.Message))
+    @using (Html.BeginForm())
     {
-        <div>@Html.Raw(Model.Message)</div>
-        <br />
+        if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div>@Html.Raw(Model.Message)</div>
+            <br />
+        }
+        <div class="row">
+            <div class="col-md-1">
+                <p>API Methods:</p>
+            </div>
+            <div class="col-md-8">
+                @Html.DropDownListFor(model => model.APIMethodId, Model.AvailableMethods)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <input type="submit" name="Submit">
+            </div>
+        </div>
     }
-    <div class="row">
-        <div class="col-md-1">
-            <p>API Methods:</p>
-        </div>
-        <div class="col-md-8">
-            @Html.DropDownListFor(model => model.APIMethodId, Model.AvailableMethods)
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1">
-            <input type="submit" name="Submit">
-        </div>
-    </div>
-}
+</div>
