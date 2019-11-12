@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top iz-mvc-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -79,7 +79,9 @@
     <div class="container-fluid body-content">
         @RenderBody()
         <footer>
-            <p>&copy; @DateTime.Now.Year - Izenda Integrated BI Platform - Version @IzendaSkinHelper.GetCurrentProductVersion()</p>
+            <div class="izenda-content-wrapper">
+                <p>&copy; @DateTime.Now.Year - Izenda Integrated BI Platform - Version @IzendaSkinHelper.GetCurrentProductVersion()</p>
+            </div>
         </footer>
     </div>
 

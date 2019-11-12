@@ -98,6 +98,9 @@
     <Reference Include="System.Data.CData.MongoDB">
       <HintPath>IzendaReferences\System.Data.CData.MongoDB.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.CData.Excel">
+      <HintPath>IzendaReferences\System.Data.CData.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>IzendaReferences\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -140,6 +143,9 @@
     </Reference>
     <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Mongo">
       <HintPath>IzendaReferences\Izenda.BI.DataAdaptor.RDBMS.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Excel">
+      <HintPath>IzendaReferences\Izenda.BI.DataAdaptor.RDBMS.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Izenda.BI.DataSourceAdapter, Version=0.22.15.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -211,6 +217,9 @@
     </Reference>
     <Reference Include="Izenda.BI.QueryNormalizer.Mongo">
       <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Excel">
+      <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Izenda.BI.QueryNormalizer.Utility">
       <HintPath>IzendaReferences\Izenda.BI.QueryNormalizer.Utility.dll</HintPath>
