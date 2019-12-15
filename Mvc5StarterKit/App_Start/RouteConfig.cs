@@ -23,6 +23,12 @@ namespace Mvc5StarterKit
             );
 
             routes.MapRoute(
+                name: "IframeViewer",
+                url: "izenda/report/iframe/{id}",
+                defaults: new { controller = "Home", action = "IframeViewer" }
+            );
+
+            routes.MapRoute(
                 name: "ReportViewer",
                 url: "izenda/report/view/{id}",
                 defaults: new { controller = "Report", action = "ReportViewer" }
