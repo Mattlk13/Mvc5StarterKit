@@ -552,6 +552,20 @@ namespace Mvc5StarterKit.Controllers
             return View();
         }
 
+        public ActionResult IframeViewer(string id)
+        {
+            var queryString = Request.QueryString;
+            dynamic filters = new System.Dynamic.ExpandoObject();
+            foreach (string key in queryString.AllKeys)
+            {
+                ((IDictionary<String, Object>)filters).Add(key, queryString[key]);
+            }
+
+            ViewBag.overridingFilterQueries = JsonConvert.SerializeObject(filters); ;
+            ViewBag.Id = id;
+            return View();
+        }
+
         /// <summary>
         /// Create a custom route to intercept login requests for the Izenda API. This is needed for the 
         /// Izenda Copy Console as it will only authenticate against "api/user/login".

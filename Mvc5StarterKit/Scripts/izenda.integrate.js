@@ -217,6 +217,10 @@ var izendaInitReportViewer = function (reportId, filters) {
     this.DoRender(successFunc);
 };
 
+var izendaInitIframeViewer = function (reportId, filters) {
+    IzendaSynergy.renderReportViewerPage(document.getElementById('izenda-root'), reportId, filters);
+};
+
 var izendaInitDashboard = function () {
 
     function successFunc(data, status) {
