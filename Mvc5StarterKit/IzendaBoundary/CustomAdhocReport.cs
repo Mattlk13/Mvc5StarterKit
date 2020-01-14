@@ -8,6 +8,7 @@ using Izenda.BI.Framework.Models;
 using Izenda.BI.Framework.Models.Common;
 using Izenda.BI.Framework.Models.ReportDesigner;
 using Izenda.BI.Framework.Utility;
+using Izenda.BI.Framework.Models.Contexts;
 
 namespace Mvc5StarterKit.IzendaBoundary
 {
@@ -104,6 +105,9 @@ namespace Mvc5StarterKit.IzendaBoundary
 
         public override ReportFilterSetting SetHiddenFilters(SetHiddenFilterParam param)
         {
+            if (UserContext.Current?.CurrentUser != null && UserContext.Current.CurrentUser.IsSystemAdmin())
+                return base.SetHiddenFilters(param);
+
             var filterFieldName = "ShipRegion";
 
             Func<ReportFilterSetting, int, QuerySource, QuerySourceField, Guid, Relationship, int> addHiddenFilters = (result, filterPosition, querySource, field, equalOperator, rel) =>
