@@ -1,13 +1,12 @@
 ﻿using Izenda.BI.Framework.CustomConfiguration;
 using System;
 using System.Collections.Generic;
+using System.Composition;
 using System.Linq;
 using System.Web;
 using Izenda.BI.Framework.Models;
 using Izenda.BI.Framework.Models.Common;
-using System.ComponentModel.Composition;
 using Izenda.BI.Framework.Models.ReportDesigner;
-using Izenda.BI.Framework.Components.QueryExpressionTree;
 using Izenda.BI.Framework.Utility;
 
 namespace Mvc5StarterKit.IzendaBoundary
